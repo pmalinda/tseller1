@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <h1>Online Shop</h1>
+        <nav class="navbar">
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('about')">About</a>
+            <a href="#" onclick="showSection('cart')">Cart</a>
+            <a href="#" onclick="showSection('store')">Store</a>
+            <a href="#" onclick="showSection('admin-login')">Admin</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="page-section">
+        <h2>Welcome to Our Online Shop!</h2>
+        <p>Explore our products and enjoy your shopping experience.</p>
+        <div>
+            <button onclick="showRegister()">Register</button>
+        </div>
+        <div id="register-form" class="auth-form" style="display: none;">
+            <h3>Register</h3>
+            <input type="text" id="register-username" placeholder="Username">
+            <input type="email" id="register-email" placeholder="Email">
+            <select id="register-role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button onclick="register()">Register</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section" style="display: none;">
+        <h2>About Us</h2>
+        <p>We provide the best products at affordable prices!</p>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="page-section" style="display: none;">
+        <h2>Search Products</h2>
+        <button onclick="showSection('store')">View All Products</button>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="page-section" style="display: none;">
+        <h2>Our Products</h2>
+        <div id="product-list"></div>
+    </section>
+
+    <!-- Admin Login Section -->
+    <section id="admin-login" class="page-section" style="display: none;">
+        <h2>Admin Login</h2>
+        <input type="text" id="admin-username" placeholder="Admin Username">
+        <button onclick="adminLogin()">Login</button>
+    </section>
+
+    <!-- Admin Dashboard Section -->
+    <section id="admin-dashboard" class="page-section" style="display: none;">
+        <h2>Admin Dashboard</h2>
+        <h3>Manage Products</h3>
+        <div class="auth-form">
+            <input type="text" id="product-name" placeholder="Product Name">
+            <input type="text" id="product-description" placeholder="Product Description">
+            <input type="number" id="product-price" placeholder="Price">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+        <div id="admin-product-list">
+            <h4>Products</h4>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Tseller Shop.</p>
+        <p>Contact Us: trickalholdinf@gmail.com : Phone number:+256 996432431</p>
+        <p>Follow us on 
+            <a href="https://facebook.com" target="_blank">Facebook</a>, 
+            <a href="https://instagram.com" target="_blank">Instagram</a>, 
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </p>
+    </footer>
+
+    <script src="user.js"></script>
+</body>
+</html>
